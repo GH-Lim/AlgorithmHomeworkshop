@@ -1,11 +1,11 @@
-import sys
-sys.stdin = open('02.txt', 'r')
+# import sys
 
 
 def tracking(a, b):
     global result
     visited[a][b] = 1
-    for vector in near:
+    for
+# sys.stdin = open('02.txt', 'r')vector in near:
         if not result:
             if 0 <= a + vector[0] < N and 0 <= b + vector[1] < N and not visited[a + vector[0]][b + vector[1]]:
                 if maze[a + vector[0]][b + vector[1]] == '0':

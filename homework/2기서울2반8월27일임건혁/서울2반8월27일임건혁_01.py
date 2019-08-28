@@ -1,5 +1,5 @@
-import sys
-sys.stdin = open('01.txt', 'r')
+# import sys
+# sys.stdin = open('01.txt', 'r')
 
 
 def forth(S):

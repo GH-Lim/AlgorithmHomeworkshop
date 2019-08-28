@@ -1,5 +1,5 @@
-import sys
-sys.stdin = open('03.txt', 'r')
+# import sys
+# sys.stdin = open('03.txt', 'r')
 
 
 def rcp(a, b):
