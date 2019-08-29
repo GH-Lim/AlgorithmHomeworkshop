@@ -1,34 +1,29 @@
 import sys
 sys.stdin = open('input.txt', 'r')
-from pprint import pprint
-
 from collections import deque
-
-
-def call(G, v):
+def call(s):
     visited = [0] * 101
     queue = deque()
-    queue.append(v)
+    visited[s] = 1
+    queue.append(s)
     while queue:
-        t = queue.popleft()
-        if not visited[t]
-            visited[t] = True
-            visit(t)
+        result = 0
+        for _ in range(len(queue)):
+            t = queue.popleft()
+            result = result if result > t else t
+            for i in range(1, 101):
+                if G[t][i] and not visited[i]:
+                    visited[i] = 1
+                    queue.append(i)
+    return result
 
 
 for tc in range(1, 11):
     L, start = map(int, input().split())
     edges = deque(map(int, input().split()))
-    nodes = deque(deque() for _ in range(101))
-    step = 0
-    max_step = 0
-    result = []
+    G = [[0] * 101 for _ in range(101)]
     while edges:
         temp_1 = edges.popleft()
         temp_2 = edges.popleft()
-        if temp_2 not in nodes[temp_1]:
-            nodes[temp_1].append(temp_2)
-    # pprint(nodes)
-    # print()
-    call(start)
-    print(result)
+        G[temp_1][temp_2] = 1
+    print('#{} {}'.format(tc, call(start)))

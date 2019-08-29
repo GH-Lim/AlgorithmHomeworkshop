@@ -1,5 +1,5 @@
-import sys
-sys.stdin = open('03.txt', 'r')
+# import sys
+# sys.stdin = open('03.txt', 'r')
 from collections import deque
 T = int(input())
 for tc in range(1, T + 1):
