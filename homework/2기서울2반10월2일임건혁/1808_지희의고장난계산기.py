@@ -55,6 +55,8 @@ for tc in range(1, int(input()) + 1):
         else:
             dp[-1] = -2
     print('#%d %d' % (tc, dp[-1] + 1))
+
+
     # print(candis[:50]) # 54
     # ans = 987654321
     # if visit_num[temp]:
