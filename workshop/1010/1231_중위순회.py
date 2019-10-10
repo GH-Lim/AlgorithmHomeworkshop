@@ -2,11 +2,9 @@ def in_order(node):
     l, r = L[node]
     if l:
         in_order(l)
-        print(nodes[node], end='')
-        if r:
-            in_order(r)
-    else:
-        print(nodes[node], end='')
+    print(nodes[node], end='')
+    if r:
+        in_order(r)
 
 
 for tc in range(1, 11):
